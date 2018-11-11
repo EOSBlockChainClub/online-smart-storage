@@ -22,7 +22,7 @@ export default () => {
       }
       renderer.render(jobs).then(html => res.send(html))
     }
-    api.get('/s/storage', storageContract)
+    api.get('/', storageContract)
 
     return api
   }

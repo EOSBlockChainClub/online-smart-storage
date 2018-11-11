@@ -9,7 +9,7 @@ import io from './utils/io'
 let app = express()
 
 // Set up a whitelist and check against it:
-var whitelist = ['http://dev01.alex2006hw.com', 'http://dev01.alex2006hw.com:8080',, 'http://dev01.alex2006hw.com:8889', 'http://localhost']
+var whitelist = ['http://dev01.alex2006hw.com', 'http://dev01.alex2006hw.com:8080', 'http://dev01.alex2006hw.com:8889', 'http://localhost']
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {

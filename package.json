@@ -4,7 +4,7 @@
   "description": "![oss-icon](./assets/oss-icon.png) # Online-Smart-Storage  ## Smart-Contract for storage ---------------------- ### Why",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+        "unlock": "find . -name package-lock.json | xargs rm -f"
   },
   "repository": {
     "type": "git",
