@@ -4,16 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "server": "pm2 start src/index.js --env production -i 1 --name server ",
-    "worker": "pm2 start jobworker/src/jobWorker.js --env production -i 0 --name worker ",
-    "start": "npm install && npm run build ",
+    "server": "PORT=8889 ./node_modules/pm2/bin/pm2 start index.js --env production -i 1 --name server ",
+    "worker": "./node_modules/pm2/bin/pm2 start jobWorker.js --env production -i 0 --name worker ",
+    "start": "NODE_ENV=production npm run server;npm run worker;npm run sleep ",
+    "stop": "./node_modules/pm2/bin/pm2 kill",
+    "sleep": "while(true);do sleep 10s;done",
     "dev": "nodemon --exec babel-node src/index.js",
     "build": "npm run build:server;npm run build:worker",
     "build:worker": "cd jobworker && npm start",
     "build:server": "babel src -s -D -d dist",
-    "postbuild": "cp -Ra jobworker/build/* dist/ && cp -Ra .env dist/ && cp -Ra templates/packages/package.json dist/",
-    "lint": "standard | snazzy",
-    "unlock": "find . -name package-lock.json | xargs rm -f"
+    "postbuild": "cp -Ra jobworker/build/* dist/",
+    "lint": "standard | snazzy"
   },
   "dependencies": {
     "cors": "2.8.4",
@@ -23,6 +24,9 @@
     "express": "4.16.3",
     "go-ipfs-dep": "0.4.18",
     "hypernova": "git+https://github.com/prod-usertoken/hypernova.git",
+    "hypernova-aphrodite": "2.1.1",
+    "hypernova-client": "1.1.0",
+    "hypernova-react": "2.1.0",
     "ipfs": "0.33.1",
     "ipfs-api": "26.1.2",
     "ipfsd-ctl": "0.40.0",
@@ -32,18 +36,5 @@
     "pm2": "^3.2.2",
     "socket.io": "2.1.1",
     "uuid": "^3.3.2"
-  },
-  "devDependencies": {
-    "@babel/cli": "7.1.2",
-    "@babel/core": "7.1.2",
-    "@babel/node": "7.0.0",
-    "@babel/preset-env": "7.1.0",
-    "babel-eslint": "10.0.1",
-    "nodemon": "1.18.1",
-    "snazzy": "7.1.1",
-    "standard": "11.0.1"
-  },
-  "standard": {
-    "parser": "babel-eslint"
   }
 }
