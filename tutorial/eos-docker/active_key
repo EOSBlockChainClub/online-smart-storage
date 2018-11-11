@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export active_key=$(cat $EOS_HOME/.ActiveKeys |grep Public |cut -d" " -f3)
+echo $active_key

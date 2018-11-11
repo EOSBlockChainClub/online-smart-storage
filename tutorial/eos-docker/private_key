@@ -1,0 +1,4 @@
+#!/bin/bash
+export private_key=$(cat $EOS_HOME/.Pass | tail -n 1 | tr -d '"' | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+echo $private_key | pbcopy
+echo $private_key

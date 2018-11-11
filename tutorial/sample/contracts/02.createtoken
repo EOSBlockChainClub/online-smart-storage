@@ -1,0 +1,5 @@
+
+docker exec -it eosio /opt/eosio/bin/cleos --url http://127.0.0.1:7777 --wallet-url http://127.0.0.1:5555 \
+push action eosio.token create '[ "eosio", "1000000000.0000 SYS"]' -p eosio.token@active
+
+

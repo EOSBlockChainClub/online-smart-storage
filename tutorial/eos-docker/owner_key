@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export owner_key=$(cat $EOS_HOME/.OwnerKeys |grep Public |cut -d" " -f3)
+echo $owner_key

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# start nodeosd and keosd
+docker-compose up -d
+
+# create wallet and save password
+cleos wallet create --to-console > .Pass
+
+# create owner and active keys
+cleos create key --to-console > .OwnerKeys
+cleos create key --to-console > .ActiveKeys
+
+# import eosio private key
+cleos wallet import --private-key=5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
+
+# set keys
+source set_keys
+
+# create account
+cleos create account eosio $EOS_ACCOUNT $owner_key $active_key

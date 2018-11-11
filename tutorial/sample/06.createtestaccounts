@@ -1,0 +1,8 @@
+docker exec -it eosio /opt/eosio/bin/cleos --url http://127.0.0.1:7777 --wallet-url http://127.0.0.1:5555 \
+create account eosio bob EOS5JCdjQKhjSpNBrb53RhVwsYTWhdsiMi7uZPz9VaEoYqTjpTJZq 
+
+docker exec -it eosio /opt/eosio/bin/cleos --url http://127.0.0.1:7777 --wallet-url http://127.0.0.1:5555 \
+create account eosio alice EOS5JCdjQKhjSpNBrb53RhVwsYTWhdsiMi7uZPz9VaEoYqTjpTJZq
+
+docker exec -it eosio /opt/eosio/bin/cleos --url http://127.0.0.1:7777 --wallet-url http://127.0.0.1:5555 \
+wallet list

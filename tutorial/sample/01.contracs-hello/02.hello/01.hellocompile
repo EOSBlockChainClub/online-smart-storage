@@ -1,0 +1,18 @@
+eosio-cpp -o hello.wasm hello.cpp --abigen
+#
+docker exec -it eosio /opt/eosio/bin/cleos --url http://127.0.0.1:7777 --wallet-url http://127.0.0.1:5555 wallet keys
+
+
+docker exec -it eosio /opt/eosio/bin/cleos --url http://127.0.0.1:7777 --wallet-url http://127.0.0.1:5555 \
+create account eosio hello EOS5JCdjQKhjSpNBrb53RhVwsYTWhdsiMi7uZPz9VaEoYqTjpTJZq  -p eosio@active
+
+
+docker exec -it eosio /opt/eosio/bin/cleos --url http://127.0.0.1:7777 --wallet-url http://127.0.0.1:5555 \
+set contract hello /netdisk/alex/work/eos/tutorial/contracts/hello -p hello@active
+
+docker exec -it eosio /opt/eosio/bin/cleos --url http://127.0.0.1:7777 --wallet-url http://127.0.0.1:5555 \
+push action hello hi '["bob"]' -p bob@active
+
+docker exec -it eosio /opt/eosio/bin/cleos --url http://127.0.0.1:7777 --wallet-url http://127.0.0.1:5555 \
+push action hello hi '["bob"]' -p alice@active
+
