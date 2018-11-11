@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon --exec babel-node src/index.js",
     "build": "babel src -s -D -d dist",
+    "postbuild": "cp .env dist/",
     "lint": "standard | snazzy"
   },
   "dependencies": {
