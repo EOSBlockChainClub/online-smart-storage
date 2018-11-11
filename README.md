@@ -12,7 +12,7 @@
 
 ```
   git clone https://github.com/alex-public/online-smart-storage.git
-  cd online-smart-storage && quick_start.sh
+  cd online-smart-storage && ./quick_start.sh
   cd online-smart-storage/frontend && npm install && npm start
   cd online-smart-storage/backend && npm install && npm start
 ```
