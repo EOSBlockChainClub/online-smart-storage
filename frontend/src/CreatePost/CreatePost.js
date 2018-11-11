@@ -31,7 +31,7 @@ class CreatePost extends Component {
             name='title'
             value={this.state.title}
             onChange={this.handleOnChange}
-            placeholder='Title'
+            placeholder='Wallet Public Key'
           />
           <textarea
             className='margin-bottom-15'
@@ -39,20 +39,20 @@ class CreatePost extends Component {
             value={this.state.content}
             onChange={this.handleOnChange}
             rows={4}
-            placeholder='Content'
+            placeholder='{ index: "publicPKI", size: "multiples of 1GB", speed: "10Gbits/sec", price: "1gas", location: "94112"}'
           />
           <input
             className='margin-bottom-15'
             name='tag'
             value={this.state.tag}
             onChange={this.handleOnChange}
-            placeholder='Tag'
+            placeholder='Search LABELS'
           />
           <button
             onClick={this.createPost}
             type='submit'
             className='margin-right-15'
-          >Create Post</button>
+          >Sell Storage</button>
         </div>
       </div>
     )

@@ -86,7 +86,7 @@ button, .btn, submit {
 
 .card-item {
   position: relative;
-  background: #ffffff;
+  background: #b1bfc8;
   box-shadow: 0px 3px 18px rgba(112, 119, 136, 0.15);
   overflow: hidden; }
   .card-item p {
@@ -96,12 +96,13 @@ button, .btn, submit {
     align-self: center;
     justify-self: center; }
   .card-item .card-footer {
-    background: #f7fafc;
+    background: #b1bfc8;
     border-top: 1px solid #dde7f1;
     border-bottom: 1px solid #dde7f1;
     color: #b1bfc8; }
   .card-item .detailAvatar {
-    background: url(img/icons/avatar.svg); }
+    background: url(img/icons/avatar.svg);
+    color: #f35ee7; }
   .card-item .detailHeart {
     background: url(img/icons/heart.svg); }
   .card-item .detailTag {
