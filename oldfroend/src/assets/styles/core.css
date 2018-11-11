@@ -210,7 +210,7 @@ button, .btn, submit {
   opacity: 0; }
 
 .layoutStandard .logo {
-  background: #141C47 url(img/logo.png);
+  background: #141C47 url(img/logo.svg);
   background-position: 30px center;
   background-repeat: no-repeat;
   height: 80px;
