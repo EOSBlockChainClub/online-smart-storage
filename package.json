@@ -1,0 +1,20 @@
+{
+  "name": "online-smart-storage",
+  "version": "1.0.0",
+  "description": "![oss-icon](./assets/oss-icon.png) # Online-Smart-Storage  ## Smart-Contract for storage ---------------------- ### Why",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-public/online-smart-storage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alex-public/online-smart-storage/issues"
+  },
+  "homepage": "https://github.com/alex-public/online-smart-storage#readme"
+}

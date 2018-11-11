@@ -27,6 +27,8 @@
     "hypernova-aphrodite": "2.1.1",
     "hypernova-client": "1.1.0",
     "hypernova-react": "2.1.0",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
     "ipfs": "0.33.1",
     "ipfs-api": "26.1.2",
     "ipfsd-ctl": "0.40.0",
