@@ -4,16 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "server": "pm2 start src/index.js --env production -i 1 --name server ",
-    "worker": "pm2 start jobworker/src/jobWorker.js --env production -i 0 --name worker ",
-    "start": "npm install && npm run build ",
-    "dev": "nodemon --exec babel-node src/index.js",
-    "build": "npm run build:server;npm run build:worker",
-    "build:worker": "cd jobworker && npm start",
-    "build:server": "babel src -s -D -d dist",
-    "postbuild": "cp -Ra jobworker/build/* dist/ && cp -Ra .env dist/ && cp -Ra templates/packages/package.json dist/",
-    "lint": "standard | snazzy",
-    "unlock": "find . -name package-lock.json | xargs rm -f"
+    "start": "nodemon --exec babel-node src/index.js",
+    "build": "babel src -s -D -d dist",
+    "lint": "standard | snazzy"
   },
   "dependencies": {
     "cors": "2.8.4",
@@ -22,14 +15,12 @@
     "dotenv": "6.0.0",
     "express": "4.16.3",
     "go-ipfs-dep": "0.4.18",
-    "hypernova": "git+https://github.com/prod-usertoken/hypernova.git",
     "ipfs": "0.33.1",
     "ipfs-api": "26.1.2",
     "ipfsd-ctl": "0.40.0",
     "mongodb": "3.1.1",
     "mongoose": "5.2.3",
     "orbit-db": "0.19.9",
-    "pm2": "^3.2.2",
     "socket.io": "2.1.1",
     "uuid": "^3.3.2"
   },
